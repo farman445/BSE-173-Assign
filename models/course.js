@@ -1,11 +1,11 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
 var courseSchema = mongoose.Schema({
-	id: String,
-	name: String,
-	duration: String,
-	fee: Number,
+    crfirstName: String,
+    crlastName: String,
+    crPhone: Number
 });
-const Course = mongoose.model("Course", courseSchema);
+
+var Course = mongoose.model("Course",courseSchema);
 
 module.exports = Course;

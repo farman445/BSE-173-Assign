@@ -1,6 +1,20 @@
 extends layout
 
 block content
-
-  h1 HomePage
-  
+    .container
+        table.table
+            tr
+                //th Course ID
+                th First Name
+                th Last Name
+                th Phone
+                th Actions
+            each course in courses
+                tr
+                 //td  #{course._id}
+                td  #{course.crfirstName}
+                td  #{course.crlastName}
+                td  #{course.crPhone}
+                td
+                    a(href="/"+course._id+"/edit").btn.btn-warning.mr-1 Update
+                    a(href="/"+course._id+"/delete").btn.btn-danger Delete
